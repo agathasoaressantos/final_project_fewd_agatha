@@ -6,7 +6,7 @@ body {
 
 /* Scroll to Top Button */
 
-/* This functionality was copied from this resource: "https://www.w3schools.com/howto/howto_js_scroll_to_top.asp". However, I've styled it on my own */
+/* This functionality was partially copied from this resource: "https://www.w3schools.com/howto/howto_js_scroll_to_top.asp". However, I've styled it on my own */
 
 #myBtn {
     display: none;
@@ -19,7 +19,7 @@ body {
     background-color: #d44c8b;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;    
@@ -46,7 +46,7 @@ body {
 }
 
 #logo {
-    width: 500px;
+    max-width: 200px;
     justify-content: flex-start;
 }
 
@@ -81,18 +81,50 @@ a:hover {
     margin-right: auto;
 }
 
+.illustration-overlay {
+    position: relative;
+    width: 420px;       
+}
+
+.image_title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba (0, 0, 0, 0.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image_title > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image_title:hover {
+    opacity: 1;
+}
+
+.image_title:hover > * {
+    transform: translateY(0);
+}
+
 .illustration-container-1, .illustration-container-3, .illustration-container-5, .illustration-container-7, .illustration-container-9 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: space-between;  
     gap: 5px;    
-}
-
-#illustration-1, #illustration-2, #illustration-3, #illustration-7, #illustration-8, #illustration-9, #illustration-13, #illustration-14, #illustration-15, #illustration-19, #illustration-20, #illustration-21, #illustration-25, #illustration-26, #illustration-27 {
-    width: 420px;
-    height: 420px;
-    cursor: pointer;
 }
 
 .illustration-container-2, .illustration-container-4, .illustration-container-6, .illustration-container-8 {
@@ -103,11 +135,26 @@ a:hover {
     gap: 5px;  
 }
 
+#illustration-1, #illustration-2, #illustration-3, #illustration-7, #illustration-8, #illustration-9, #illustration-13, #illustration-14, #illustration-15, #illustration-19, #illustration-20, #illustration-21, #illustration-25, #illustration-26, #illustration-27 {
+    max-width: 420px;
+    max-height: 420px;
+    cursor: pointer;    
+}
+
+
 #illustration-4, #illustration-5, #illustration-6, #illustration-10, #illustration-11, #illustration-12, #illustration-16, #illustration-17, #illustration-18, #illustration-22, #illustration-23, #illustration-24 {
-    width: 420x;
-    height:420px;
+    max-width: 420px;
+    max-height:420px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .illustration-container-1, .illustration-container-3, .illustration-container-5, .illustration-container-7, .illustration-container-9, .illustration-container-2, .illustration-container-4, .illustration-container-6, .illustration-container-8 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    }
 
 /* Footer */
 
@@ -140,110 +187,163 @@ a:hover {
     gap: 20px;    
 }
 
-#footer-icon-1, #footer-icon-2, #footer-icon-3 {
-    width: 27px;
-    height: 27px;
+.fa-instagram, .fa-envelope, .fa-github, .fa-linkedin-in, .fa-pinterest {
+    font-size: 30px;    
+    color: #9cb645;
+}
+
+/* Page Titles */
+
+#page-title-about {    
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    background: -webkit-linear-gradient(#c70860, #d44c8b, #9cb645);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* About Page */
 
-.about-title-container {
+.personal-information-title {
     display: flex;
-    justify-content: center;
-    padding-top: 20px; 
+    flex-direction: row;    
 }
 
-#about-page-title {
-    font-family: 'Raleway', sans-serif;
-    color: #9cb645;
-    font-size: 40px;
-    font-weight: normal;
+#personal-information-container-1 {
     display: flex;
-    
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;  
 }
 
-.about-container {
-    display: flex;
-    flex-direction: column;    
-}
-
-
-#about-agatha-1 {
-    width: auto;
-    height: auto;
-}
-
-#about-text-2 {
+#personal-information-details-1 {
     font-family: 'Raleway', sans-serif;
-    color: #454042;
-    font-size: 15px;
-    font-weight: normal;
-    text-align: justify;
-}
-
-#about-text-1 {
-    font-family: 'Raleway', sans-serif;
-    color: #9cb645;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 27px;
+    color: #454042;
+}
+
+#personal-information-details-2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #454042;
+}
+
+#personal-information-title {    
+    position: relative;
+    top: 150px;
+    display: inline-block;
+    margin-left: 700px;
+    margin-right: 50px;    
+    height: 0px;
+}
+
+#personal-information-details-3 {
+    overflow: hidden;
+    width: 0;       
+    border-right: .10em solid orange;
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    animation: 
+        typing 3s  steps(20, end) forwards,
+        blink .8s infinite;
+    color:#d44c8b;       
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: #9cb645; }
+}
+
+.personal-information-container-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    text-align: justify;
+    margin-top: 0;
+}
+
+#photo-agatha {
+    max-height: 100%;
+    min-height: 50%;  
+      
+}
+
+#personal-information-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #454042;
+    font-weight: normal;
+    padding-top: 150px;    
 }
 
 /* Contact Page */
 
-.contact-page-title {
-    font-family: 'Raleway', sans-serif;
-    color: #9cb645;
-    font-size: 40px;
-    font-weight: normal;
+.contact-introduction-2 {
+    padding-top: 50px;
     display: flex;
     justify-content: center;
-    padding-top: 20px;     
+    gap: 50px;
+    align-items: center;
+}
+
+input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;    
+    border: 2px solid #d44c8b;       
+    width: 400px;
+    height: 24px;
+    border-radius: 15px;  
+}
+
+#form-last-name, #form-email, #form-message, #form-button {
+    padding-top: 10px;
+}
+
+textarea {
+    font-family: 'Raleway', sans-serif;    
+    font-size: 14px;
+    border: 2px solid #d44c8b;
+    border-radius: 15px;
+    width: 400px;
+    height: 200px;
+}
+
+#submit {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color:  #fffcf2;
+    font-weight: bold;
+    border: #9cb645;
+    background-color: #9cb645;
+    width: 100px;    
+}
+
+#photo-agatha-2 {
+    width: 420x;
+    height:420px;
+}
+
+.contact-introduction {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
 }
 
 #contact-text {
     font-family: 'Raleway', sans-serif;
-    color: #d44c8b;
-    font-weight: normal; 
-    font-size: 20px;
-    text-align: center; 
-}
-
-.contact-text-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    margin-left: 150px;
-    margin-right: 150px;  
-}
-
-.container {    
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    background:#9cb645;
-    margin-top: 80px;
-    margin-left: 150px;
-    margin-right: 150px;
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    column-gap: 10px;   
-}
-
-form label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    color: #454042;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    border: 0;
-    color: #454042;    
-    padding: 20%;    
-    background: pink;
+    font-size: 20px; 
+    color: #9cb645;    
 }

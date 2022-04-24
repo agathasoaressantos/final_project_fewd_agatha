@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agatha Soares Santos</title>
+    <title>Agatha Soares Santos | About</title>
+    <link rel="shortcut icon" type="image/png" href="head_icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://www.flaticon.com/authors/tomas-knop">
-    <link rel="stylesheet" href="https://www.freepik.com">
+    <script src="https://kit.fontawesome.com/bd0b8c7696.js" crossorigin="anonymous"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
     <header class="website-header">
         <div class="top-nav-container">
             <a href="index.html" style="text-decoration:none">
-                <img id="logo" src="logo_placeholder.png"> 
+                <img id="logo" src="logo_gif.gif"> 
             </a> 
         </div>      
         <div class="menu-items">
@@ -32,20 +32,27 @@
         </div>    
     </header>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top
-    </button>
+     <!-- This functionality was partially copied from this resource: "https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
 
-    <h1 id="about-page-title">ABOUT</h1>
-    <div class="about-title-container">            
-    <div class="about-container">
-    <section class="about-container-2">
-        <img id="about-agatha-1"src="agatha_1.png">
-    </section>      
-        <h1 id="about-text-1">I am Agatha. 29 years old. Born in Brazil.</h1>   
-    <section class="about-container-3">
-        <p id="about-text-2">From 19 to 21 years old I have presented myself as a journalist and its many role variations. I have been an intern, a reporter, a photographer when needed, and a news editor for a newspaper in Brazil. Everything changed when in 2014 I decided to give my life a good shake. I left all my certainties, stability, and the pleasure of having friends and family one bus away to move to the U.S.<br></br>Since 2014 I have been discovering new passions, skills, necessities, and most importantly: the ability to live many lives in just one.<br></br>In the States, I've been working and learning enough to be a marketing professional. I have served as a freelancer, an in-house marketing coordinator. For 2+ years I worked as a marketing associate in a digital marketing agency in Boston (MA). Now I spend most of my day in my full-time job working with marketing automation in the financial field.<br></br>uring my spare time I illustrate digitally and traditionally, as you can see here on page [Work]. Since the beginning of 2022 I have been learning how to code, as you can see on these website pages that I have created from scratch.</p>            
-    </section>
-    </div> 
+     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-hand-pointer"></i>
+     </button>
+ 
+     <!---->
+
+    <h1 id="page-title-about">about</h1>
+   
+    <div id="personal-information-title">
+        <h1 id="personal-information-details-1">hi, there! 👋</h1>     
+        <h1 id="personal-information-details-2">i am agatha. brazilian, based in boston. 29 years-old. I am a:</h1>
+        <h1 id="personal-information-details-3">digital marketing professional + illustrator + front-end web developer</h1>        
+    </div>
+
+    <section class="personal-information-container-3">
+        <div id="personal-information-image">
+            <img id="photo-agatha" src="agatha_1.png">
+        </div>
+        <h1 id="personal-information-text"><span style="font-weight: bold;">✍️ this is my story:</span><span style="font-weight: normal;"> with a bachelor's in social communications, from 19 to 21 years old I have presented myself as a journalist and its many role variations. I have been a reporter, a photographer, and a news editor for a newspaper in brazil. everything changed when in 2014 I decided to give my life a good shake. I left all my certainties, stability, and the pleasure of having friends and family one bus away to move to another country. in the u.s, I worked as a freelancer and a marketing coordinator for various contractors. for 2+ years I worked as a marketing associate in a digital marketing agency in boston (massachusetts). </span><br></br><span style="font-weight: bold;">💼 this is what I currently do:</span><span style="font-weight: normal;"> I divide my time between working as a marketing associate focused on email marketing and marketing automation in the financial field and as a marketing coordinator overseeing all marketing efforts for a painting contractor.</span><br></br><span style="font-weight: bold;">🧠 this is what I have experience on:</span><span style="font-weight: normal;"> hubspot; constant contact; mailchimp; google ads; google analytics; wordpress; paid and social advertising; content strategy and development for email, blog, and social.</span><br></br><span style="font-weight: bold;">💻 this is what I am currently learning or enjoying doing: </span><span style="font-weight: normal;">during my spare time I illustrate digitally and traditionally. I am self-skilled in procreate, lightroom, and mixed media such as watercolor, marker, and colored pencil. as you can see <a href="index.html" style="text-decoration:none">here</a>. since the beginning of 2022, I have been learning how to code and got a certificate in front-end web development. You can see my abilities on these website pages that I have created from scratch using html, css, and javascript.</span></h1>
+    </section> 
 
     <footer class="footer-container">
         <div class="footer-info-container">
@@ -53,14 +60,22 @@
         </div>
         <div class="footer-icons-container">
             <a href="mailto:brunellyagatha@gmail.com">
-                <img id="footer-icon-1" src="email.png">
+                <i class="fa-solid fa-envelope"></i>
             </a>
             <a href="https://www.instagram.com/brubsandco/">
-                <img id="footer-icon-2" src="instagram.png">
+                <i class="fa-brands fa-instagram"></i>
             </a>
             
             <a href="https://www.linkedin.com/in/agathasoaressantos/">
-            <img id="footer-icon-3" src="linkedin.png">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/agathasoaressantos">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.pinterest.com/agathasoaressantos/">
+                <i class="fa-brands fa-pinterest"></i>
             </a>
         </div>
     </footer>
